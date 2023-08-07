@@ -1,1 +1,1 @@
-# FunOlympics-website
+FunOlympics, a dynamic sports broadcasting website designed to bring you the excitement of the Olympic events. Crafted with a blend of HTML, CSS, and JavaScript, along with the power of Python Django and SQLite, FunOlympics offers an engaging platform for sports enthusiasts to stay updated, interact, and share in the spirit of athletic competition.

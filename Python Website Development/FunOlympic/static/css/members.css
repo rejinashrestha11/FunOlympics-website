@@ -1,0 +1,88 @@
+body {
+  /* background: linear-gradient(90deg, rgb(92, 143, 210) 0%, rgb(98, 134, 243) 53%, rgb(80, 90, 233) 100%); */
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+  background-size: cover;
+
+}
+  
+  .contain1 {
+    max-width: 800%;
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  /* background: linear-gradient(90deg, rgb(92, 143, 210) 0%, rgb(98, 134, 243) 53%, rgb(80, 90, 233) 100%); */
+
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  font-family: cursive;
+
+  }
+  
+  .team-members-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .team-member {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: scale(1.1);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30%;
+    border-color: black;
+  }
+  
+  .team-member h3 {
+    margin-top: 10px;
+  }
+  
+  .team-member p {
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .team-member {
+    animation: fadeIn 0.5s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.1s;
+  }
+  
+  /* 4x4 Grid */
+  @media (min-width: 768px) {
+    .team-members-section {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .team-member {
+      flex-basis: calc(25% - 40px);
+      max-width: calc(25% - 40px);
+    }
+  }

@@ -1,0 +1,175 @@
+body{
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+  background-size: cover;
+}
+.content-b {
+  margin: 10px;
+}
+
+.container-b {
+  overflow: hidden;
+}
+
+.video-sectiona {
+  /* width: 600px; */
+  margin: auto 15px auto 10px;
+  padding: 10px;
+  width: 70%;
+  float: left;
+  /* margin-right: 35px; */
+  background-color: rgba(48, 77, 155, 0.597);
+  border-radius: 4px;
+
+
+}
+
+.video-sectiona video {
+  width: 100%;
+  height: 500px;
+
+}
+
+.video-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.icon-button {
+  border-radius: 5%;
+  /* background-color: rgb(153, 215, 226); */
+  /* background: linear-gradient(90deg, rgb(47, 116, 220) 0%, rgb(73, 101, 201) 53%, rgb(41, 152, 158) 100%); */
+  background-color: rgba(94, 143, 241, 0.72);
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+
+.icon-button:hover {
+  color: #072e54;
+}
+
+.icon-button.like-button.active {
+  color: blue;
+}
+
+.icon-button.liked {
+  color: green;
+}
+
+.icon-button.unliked {
+  color: red;
+}
+
+.share-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.share-dialog-content {
+  text-align: center;
+}
+
+.social-media-icons {
+  margin-top: 10px;
+}
+
+.social-media-icon {
+  display: inline-block;
+  margin: 0 8px;
+  color: #333;
+  font-size: 24px;
+}
+
+.close-button1 {
+  position: absolute;
+  padding: auto;
+  margin: auto;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #333;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+
+/* CSS for the recommended videos section */
+.video-sectionb {
+  width: 25%;
+  float: left;
+  border-radius: 4px;
+
+}
+
+.video-sectionb video {
+  cursor: pointer;
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 6px;
+
+}
+
+.container-b::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+    /* Styling for the dialog box */
+    .dialog-container {
+    background-image: url('https://wp.inews.co.uk/wp-content/uploads/2021/07/SEI_88368815.jpg?resize=1200,900&strip=all&quality=90');
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    }
+
+    .dialog {
+      width: 300px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+      /* animation: pulsate 2s ease-in-out infinite; */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(93, 154, 239);
+
+    }
+
+    .ani {
+      animation: fadeInOut 3s ease-in-out infinite;
+
+    }
+
+    
+
+    /* Styling for the close button */
+    .close-button {
+      color: #888;
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close-button:hover {
+      color: #000;
+    }

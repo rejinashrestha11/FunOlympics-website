@@ -1,0 +1,201 @@
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-image: url('https://wp.inews.co.uk/wp-content/uploads/2021/07/SEI_88368815.jpg?resize=1200,900&strip=all&quality=90');
+  }
+  
+  .contain {
+    max-width: 350px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    background-color: rgba(18, 41, 219, 0.5);
+
+    box-shadow: 0px 2px 5px rgba(11, 142, 236, 0.511);
+    border-radius: 5%;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  form button[type="submit"] {
+    width: 20%;
+    padding: 10px;
+    background-color: #3142f3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+  }
+  
+  .separator {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bolder;
+  }
+  
+   
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icons button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  color: #ffffff;
+  margin: 0 5px; /* Adjust the margin value to control the spacing between buttons */
+}
+
+.social-icons button.facebook {
+  background-color: #3b5998;
+}
+
+.social-icons button.twitter {
+  background-color: #1da1f2;
+}
+
+.social-icons button.google {
+  background-color: #db4a39;
+}
+
+  
+  .register {
+    text-align: center;
+  }
+  
+  .register span {
+    margin-right: 5px;
+  }
+  
+  .register button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+
+.login {
+    text-align: center;
+  }
+  
+  .login span {
+    margin-right: 5px;
+  }
+  
+  .login button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+  
+  .password-container {
+    position: relative;
+  }
+
+  .password-container i {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+  }
+
+  .password-container-b {
+    position: relative;
+  }
+
+  .password-container-b i {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+  }
+
+  .password-container-c {
+    position: relative;
+  }
+
+  .password-container-c i {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+  }
+
+  .dialog {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(117, 155, 237, 0.4);
+}
+
+.dialog-content {
+  /* background-color: #655ee8; */
+  background-color: rgb(86, 98, 203);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+.close {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}

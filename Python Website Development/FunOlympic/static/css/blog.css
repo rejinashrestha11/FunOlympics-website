@@ -1,0 +1,85 @@
+body{
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+background-size: cover;
+background-color: rgba(42, 80, 187, 0.338);
+
+}
+
+.container-a {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800%;
+  background-size: cover;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(48, 77, 155, 0.597);
+
+  
+}
+
+.image-section {
+  flex: 1 1 300px;
+  padding: 10px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.text-section {
+  flex: 1 1 300px;
+  padding: 10px;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.news-section {
+  flex: 1 1 600px;
+  padding: 10px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.news-section img {
+  width: 100%;
+  height: auto;
+}
+p, h2{
+  text-align: justify;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+iframe {
+   width: 100%;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Example hover effect */
+iframe:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

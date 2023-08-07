@@ -1,0 +1,83 @@
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=2.4">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="{% static 'images/fun-olympic.png' %}"> 
+
+    <title>Fun Olympics</title>
+</head>
+    <header>
+        {% load static %}
+            <div class="navbar">
+                <a href="/"><img src="{% static 'images/fun-olympic.png' %}" alt="logo" class="logo"></a>
+  
+                <h4 style = "font-family: cursive">FunOlympics</h4>
+                {% comment %} <input type="text" placeholder="Search....">
+                        <button type="submit"><i class="fa fa-search"></i></button> {% endcomment %}
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="Search....">
+                            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                          </div>
+                          
+                {% if user.is_authenticated %}
+                <nav>
+                    <ul>
+                        
+                        <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/team">Teams</a></li>
+                        <li><a href="/schedule">Schedule</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/match">Match</a></li>
+                        <li><a href="/live" class="btn btn_live"><span class="live-icon"></span> LIVE</a></li>
+                        <li><a href="/contact">Contacts</a></li>
+                        {% comment %} <li><a href="profile"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li> {% endcomment %}
+                        
+                        <li class = "split">
+                            
+                            <h4 style: "font: bolder">Welcome {{ username }}!!</h4>
+                        
+                        <button class = "button1"><a href="logoutt"><i class="fa fa-sign-out"></i> Logout</a></button>
+                        <button class = "buttonuser"><a href="/profilepage"> <i class="fa fa-user"></i></a></button>
+
+                        </li>
+                    </ul>
+                </nav>
+            {% else %}
+           
+            
+                <nav>
+                    <ul>
+                        {% comment %} <input type="text" placeholder="Search..">
+                        <button type="submit"><i class="fa fa-search"></i></button> {% endcomment %}
+                        <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/team">Teams</a></li>
+                        <li><a href="/schedule">Schedule</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        {% comment %} <li><a href="match">Match</a></li> {% endcomment %}
+                        <li><a href="{% url 'match' %}" onclick="checkLoginStatus()">Match</a></li>
+                        <li><a href="/contact">Contacts</a></li>
+                        
+                        <li class = "split">
+                        <button class = "button1"><a href="loginn"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></button>
+                        </li>
+                        <li class = "split">
+                            <button class = "button1"><a href="register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></button>
+                            </li>
+                        
+                    </ul>
+                </nav>
+                {%endif%}
+            </div>
+            
+
+    </header>
+    {% load static %}
+      <script src="{% static 'js/header.js' %}?v=1.0"></script>

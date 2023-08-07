@@ -1,0 +1,50 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=2.6">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<footer class="footer-distributed">
+    <div class="footer-left">
+        {% load static%}
+        <a href="/"><img src="{% static 'images/fun-olympic.png' %}" alt="logo"  class="flogo">
+        <p class="footer-company-name" style = "font-family: cursive">FunOlympics © 2023</p>
+        <p class="footer-links">
+            <a href="/" class="link-1"  style = "font-family: cursive">Home</a>
+            <a href="about"  style = "font-family: cursive">About Us</a>
+            <a href="team"  style = "font-family: cursive">Teams</a>
+            <a href="schedule"  style = "font-family: cursive">Schedule</a>
+            <a href="blog"  style = "font-family: cursive">Blog</a>
+            {% comment %} <a href="match"  style = "font-family: cursive">Match</a> {% endcomment %}
+            <a href="contact"  style = "font-family: cursive">Contact Us</a>
+        </p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p ><span style = "font-family: cursive">Bagmati</span><span style = "font-family: cursive">New-Baneswor- Kathmanadu</span></p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p><span style = "font-family: cursive">+977 445566</span></p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:funolympics@gmail.com" style = "font-family: cursive">funolympics@gmail.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>About the company</span>
+            Our team of dedicated professionals works tirelessly to deliver high-quality broadcasts of various Olympic sports. Whether it's athletics, swimming, gymnastics, or any other Olympic discipline, we've got you covered.
+      </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+        </div>
+    </div>
+</footer>

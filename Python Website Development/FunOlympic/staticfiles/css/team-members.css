@@ -1,0 +1,85 @@
+/* team-members.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin-bottom: auto;
+  }
+  
+  .contain {
+    max-width: 800%;
+    background-color: #b5e2f4;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .team-members-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .team-member {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: scale(1.1);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0%;
+  }
+  
+  .team-member h3 {
+    margin-top: 10px;
+  }
+  
+  .team-member p {
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .team-member {
+    animation: fadeIn 0.5s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 0.1s;
+  }
+  
+  /* 3x3 Grid */
+  @media (min-width: 768px) {
+    .team-members-section {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .team-member {
+      flex-basis: calc(33.33% - 40px); /* Adjust based on margin and container width */
+      max-width: calc(33.33% - 40px); /* Adjust based on margin and container width */
+    }
+  }
+  

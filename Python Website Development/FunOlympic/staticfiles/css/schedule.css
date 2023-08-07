@@ -1,0 +1,127 @@
+body{
+background-color: #b5e2f4;
+}
+h2{
+  text-align: center;
+}
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.column {
+  width: calc(50% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.event {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(209, 238, 245);
+  margin: auto;
+}
+
+.event .date {
+  font-weight: bold;
+}
+
+.event .time {
+  color: #888;
+}
+
+.event .details .sport {
+  font-weight: bold;
+}
+
+.event .details .event-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.event .details .event-description {
+  color: #888;
+}
+
+.video-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 3px 20px;
+  transition: transform 0.3s ease;
+}
+
+.video-section video {
+  width: 49%;
+  height: auto;
+}
+
+.video-section video:hover {
+  transform: scale(1.1);
+}
+
+.image-section2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0 30px;
+}
+
+.image-container2 {
+  width: 600px;
+  margin-bottom: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease;
+}
+
+.image-container2:hover {
+  transform: scale(1.1);
+}
+
+.image-container2 img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Additional animation effects */
+
+.event {
+  animation: slideIn 0.5s ease;
+}
+.column {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.video-section video {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-section video:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-container2 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container2:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

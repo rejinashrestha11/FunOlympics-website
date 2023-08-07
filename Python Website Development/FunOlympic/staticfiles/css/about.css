@@ -1,0 +1,82 @@
+
+.container1 {
+  max-width: 800%;
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+  background-size: cover;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-sm-4 {
+  flex-basis: 30%;
+  max-width: 30%;
+}
+
+.col-sm-8 {
+  flex-basis: 66.66%;
+  max-width: 66.66%;
+  margin: auto;
+  text-align: justify;
+}
+
+.img1,
+.img2,
+.img3 {
+  max-width: 100%;
+}
+
+.img1 {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.img2 {
+  animation: fadeInRight 1s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.img3 {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.ha, .h,.p,
+.u {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

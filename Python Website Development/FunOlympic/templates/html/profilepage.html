@@ -1,0 +1,117 @@
+{% include 'html/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}?v=1.8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Profile</title>
+
+<div class="containerp">
+  <h2>Profile</h2>
+  
+  {% for message in messages %}
+    {% if messages %}
+    <div class="alert alert-danger">
+      {% for message in messages %}
+        <p style="color: red;">{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  {% endfor %}
+  
+  <div class="profile-container">
+    <div id="profile-picture">
+      {% load static%}
+      <img src = '{% static 'images/me.jpg'%}' style = "width: 200px; height: 200px; border-radius: 40px;">
+    </div>
+    <div id="profile-info">
+      <p><strong>First Name:</strong> {{ user.first_name }}</p>
+      <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+      <p><strong>Username:</strong> {{ user.username }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>About Me:</strong> "Embracing life's little moments with a smile 😊✨"</p>
+      <p><strong>Social Media:</strong>
+        <a href="#" class="social-media-icon facebook"><i class="fab fa-facebook-f"> Facebook</i></a> |
+        <a href="#" class="social-media-icon twitter"><i class="fab fa-twitter"> Twitter</i></a> |
+        <a href="#" class="social-media-icon instagram"><i class="fab fa-instagram"> Instagram</i></a>
+
+      </p>
+    </div>
+  </div>
+  
+
+  <div class="button-group">
+    <button id="edit">Edit Profile</button>
+    <button id="change">Change Password</button>
+  </div>
+  
+
+  <div id="edit-profile">
+    <h3>Edit Profile</h3>
+    <form action="/edit-profile" method="POST">
+      {% csrf_token %}
+      <input type="text" id="first-name" name="first_name" placeholder="First Name" value="{{ user.first_name }}" required>
+      <input type="text" id="last-name" name="last_name" placeholder="Last Name" value="{{ user.last_name }}" required>
+      <input type="text" id="username" name="username" placeholder="Username" value="{{ user.username }}" required>
+      <input type="email" id="email" name="email" placeholder="Email" value="{{ user.email }}" required>
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+
+  {% comment %} <div id="change-password">
+    <h3>Change Password</h3>
+    <form action="{% url 'change_password' %}" method="POST">
+      {% csrf_token %}
+      <input type="password" id="current-password" name="current_password" placeholder="Current Password" required>
+      <input type="password" id="new-password" name="new_password" placeholder="New Password" required>
+      <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required>
+      <button type="submit">Change Password</button>
+    </form>
+  </div> {% endcomment %}
+  <div id="change-password">
+    <h3>Change Password</h3>
+    <form action="{% url 'change_password' %}" method="POST">
+      {% csrf_token %}
+      <input type="password" id="current-password" name="current_password" placeholder="Current Password" required>
+      <input type="password" id="new-password" name="new_password" placeholder="New Password" required>
+      <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required>
+      <div class="password-toggle">
+        <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">
+        <label for="show-password">Show Password</label>
+      </div>
+      <button type="submit">Change Password</button>
+    </form>
+  </div>
+</div>
+  <script>
+    function togglePasswordVisibility() {
+      var currentPasswordInput = document.getElementById("current-password");
+      var newPasswordInput = document.getElementById("new-password");
+      var confirmPasswordInput = document.getElementById("confirm-password");
+  
+      if (currentPasswordInput.type === "password") {
+        currentPasswordInput.type = "text";
+      } else {
+        currentPasswordInput.type = "password";
+      }
+  
+      if (newPasswordInput.type === "password") {
+        newPasswordInput.type = "text";
+      } else {
+        newPasswordInput.type = "password";
+      }
+  
+      if (confirmPasswordInput.type === "password") {
+        confirmPasswordInput.type = "text";
+      } else {
+        confirmPasswordInput.type = "password";
+      }
+    }
+  </script>
+  
+
+
+{% load static %}
+<script src="{% static 'js/profile.js' %}?v=1.1"></script>
+
+{% include 'html/footer.html' %}

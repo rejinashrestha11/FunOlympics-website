@@ -1,0 +1,214 @@
+body{
+/* background-color: #36336890; */
+background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+background-size: cover;
+font-family: cursive;
+
+}
+h3{
+  text-align: center;
+  font-family: cursive;
+}
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.column {
+  width: calc(50% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.event {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(209, 238, 245);
+  margin: auto;
+}
+
+.event .date {
+  font-weight: bold;
+}
+
+.event .time {
+  color: #888;
+}
+
+.event .details .sport {
+  font-weight: bold;
+}
+
+.event .details .event-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.event .details .event-description {
+  color: #888;
+}
+
+.video-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 3px 20px;
+  transition: transform 0.3s ease;
+}
+
+.video-section video {
+  width: 49%;
+  height: auto;
+}
+
+.video-section video:hover {
+  transform: scale(1.1);
+}
+
+.image-section2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0 30px;
+}
+
+.image-container2 {
+  width: 600px;
+  margin-bottom: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease;
+}
+
+.image-container2:hover {
+  transform: scale(1.1);
+}
+
+.image-container2 img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Additional animation effects */
+
+.event {
+  animation: slideIn 0.5s ease;
+}
+.column {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.video-section video {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-section video:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-container2 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container2:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.schedule1 {
+  padding: 10px;
+  margin: 30px;
+}
+.options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.options button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #2a049aa2;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4%;
+  }
+  
+  .options button:hover {
+    background-color: #3a92dfa2;
+  }
+  
+.options button:focus {
+  outline: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+
+
+}
+
+th, td {
+  /* border: 1px solid rgb(23, 82, 72); */
+  padding: 10px;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-bottom: 1px solid #ddd;
+
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+td.highlight-regular {
+  background-color: #d5d564;
+}
+
+td.highlight-semi-final {
+  background-color: #08c3c3;
+}
+
+td.highlight-final {
+  background-color: #40aa40;
+}
+
+@keyframes tableAnimation {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+table {
+  animation-name: tableAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}

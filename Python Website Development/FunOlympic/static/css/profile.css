@@ -1,0 +1,136 @@
+.containerp {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+  background-size: cover;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+h3 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Add your custom CSS styles here */
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgba(129, 131, 243, 0.722);
+  border-radius: 40px;
+}
+
+#profile-picture {
+  width: 200px;
+  height: 200px;
+  /* background-color: #ccc; */
+  margin-right: 20px;
+  /* Add styles for profile picture here */
+  
+}
+
+#profile-info {
+  flex-grow: 1;
+}
+
+#edit-profile,
+#change-password {
+  display: none;
+}
+
+#edit,
+#change {
+  margin-top: 10px;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  margin-bottom: 10px;
+}
+
+.alert p {
+  margin: 0;
+}
+
+button {
+  background: linear-gradient(90deg, rgb(47, 116, 220) 0%, rgb(73, 101, 201) 53%, rgb(41, 152, 158) 100%);
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#profile-info {
+  margin-bottom: 20px;
+}
+
+#edit-profile.show,
+#change-password.show {
+  display: block;
+}
+
+/* Updated styles for the form inputs */
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(129, 131, 243, 0.722);
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding: 8px;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.button-group button {
+  margin: 0 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .button-group button {
+    margin: 5px 0;
+  }
+}

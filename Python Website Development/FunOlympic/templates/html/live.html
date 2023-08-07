@@ -1,0 +1,197 @@
+{% include 'html/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/live.css' %}?v=2.7">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% if user.is_authenticated %}
+<container>
+  <h2 style = "font-family: cursive; margin: 20px; text-align: center;">Now Streaming LIVE</h2>
+  <div class="video-row">
+    <div class="video-box">
+      <div class="thumbnail">
+        
+        <p class="btn btn_live"><span class="live-icon"></span> LIVE</p>
+        <video src="{% static 'video/vball.mp4' %}" controls></video>
+      </div>
+      <div class="details">
+        <h3 class="title">Thrilling Showdown: Live Women's Volleyball Tournament 2023 | Yokyo Olympic Games</h3>
+        <p class="description">Brace yourself for the Live Volleyball Tournament 2023, where the world's best teams collide in an exhilarating display of athleticism. Experience heart-pounding spikes, lightning-quick saves, and fierce competition that will leave you in awe. Don't miss out on this epic event - tune in now and let the thrill take over!</p>
+                <span class="views">60k views</span>
+      </div>
+      <div class="video-buttons">
+        <button class="icon-button like-button" onclick="toggleLike(this)"><i class="fas fa-thumbs-up"> Like</i></button>
+        <button class="icon-button unlike-button" onclick="toggleUnlike(this)"><i class="fas fa-thumbs-down"> Unlike</i></button>
+        <button class="icon-button comment-button" onclick="toggleCommentBox(this)"><i class="fas fa-comment"></i> Comment</button>
+        <div class="share-dialog" style="display: none;">
+            <button class="close-button1" onclick="toggleShareDialog()">&times;</button>
+            <div class="share-dialog-content">
+              <h3>Share on Social Media</h3>
+              <div class="social-media-icons">
+                <a href="#" class="social-media-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-media-icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-media-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-media-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-media-icon pinterest"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <button class="icon-button share-button" onclick="toggleShareDialog()"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</button>
+          <div class="wishlist-dialog" style="display: none;">
+            <div class="wishlist-dialog-content">
+              <h3>Added to Wishlist!</h3>
+              <p>Item has been successfully added to your wishlist.</p>
+
+              <a href="wishlist" class = "my-button"><i class="fa fa-cart-plus" aria-hidden="true">  View Wishlist</i></a>
+              <button class="close-button2" onclick="closeWishlistDialog()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+            </div>
+          </div>
+          
+          <button class="icon-button added-to-wishlist" onclick="addToWishlist(this)"><i class="fa fa-cart-plus" aria-hidden="true"></i> Save to wishlist</button>
+          
+</div>
+
+      <div class="comment-box" style="display: none;">
+        <div class="comments">
+          <!-- Display existing comments here -->
+        
+          <!-- Sample existing comment -->
+          <div class="comment">
+            <div class="profile-image">
+              <img src="{% static 'images/michael.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="comment-content">
+              <span class="username">Michael:</span>
+              <span class="text">This LIVE is really good quality!</span>
+            </div>
+          </div>
+          <!-- Sample existing comment -->
+          <div class="comment">
+            <div class="profile-image">
+              <img src="{% static 'images/alexander.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="comment-content">
+              <span class="username">Alexander:</span>
+              <span class="text">WOW that was so cool!!!!!!</span>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="profile-image">
+              <img src="{% static 'images/you.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="comment-content">
+              <span class="username">Josh:</span>
+              <span class="text">Yeah!! Enjoying from Home!!</span>
+            </div>
+          </div>
+        
+          <!-- New comment will be inserted here -->
+        </div>
+        <textarea placeholder="Add a Comment"></textarea>
+        <button class="submit-comment-button">Comment <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+      </div> 
+    </div>
+
+    <div class="video-box">
+      <div class="thumbnail">
+        
+        <p class="btn btn_live"><span class="live-icon"></span> LIVE</p>
+        <video src="{% static 'video/fball.mp4' %}" controls></video>
+      </div>
+      <div class="details">
+        <h3 class="title">The Ultimate Clash: LIVE Olympic Football Tournament - Road to Glory! | Yokyo Olympic Games</h3>
+        <p class="description">Experience the exhilaration of the Olympic Football Tournament with our live coverage! Watch as top teams from around the world battle it out for gold in epic showdowns. From incredible goals to outstanding saves, this tournament guarantees non-stop excitement. Join passionate fans and expert commentators for an unforgettable sporting spectacle. Don't miss a moment of the action – tune in now and witness history in the making!</p>
+        <span class="views">2000 views</span>
+      </div>
+      <div class="video-buttons">
+        <button class="icon-button like-button" onclick="toggleLike(this)"><i class="fas fa-thumbs-up"> Like</i></button>
+        <button class="icon-button unlike-button" onclick="toggleUnlike(this)"><i class="fas fa-thumbs-down"> Unlike</i></button>
+        <button class="icon-button comment-button" onclick="toggleCommentBox(this)"><i class="fas fa-comment"></i> Comment</button>
+        <div class="share-dialog" style="display: none;">
+            <button class="close-button1" onclick="toggleShareDialog()">&times;</button>
+            <div class="share-dialog-content">
+              <h3>Share on Social Media</h3>
+              <div class="social-media-icons">
+                <a href="#" class="social-media-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-media-icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-media-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-media-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-media-icon pinterest"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <button class="icon-button share-button" onclick="toggleShareDialog()"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</button>
+          <div class="wishlist-dialog" style="display: none;">
+            <div class="wishlist-dialog-content">
+              <h3>Added to Wishlist!</h3>
+              <p>Item has been successfully added to your wishlist.</p>
+
+              <a href="wishlist" class = "my-button"><i class="fa fa-cart-plus" aria-hidden="true">  View Wishlist</i></a>
+              <button class="close-button2" onclick="closeWishlistDialog()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+            </div>
+          </div>
+          
+          <button class="icon-button added-to-wishlist" onclick="addToWishlist(this)"><i class="fa fa-cart-plus" aria-hidden="true"></i> Save to wishlist</button>
+          
+</div>
+
+      <div class="comment-box" style="display: none;">
+        <div class="comments">
+          <div class="comment">
+            <div class="profile-image">
+              <img src="{% static 'images/alexander.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="comment-content">
+              <span class="username">Alex:</span>
+              <span class="text">NEPAL !!!!</span>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="profile-image">
+              <img src="{% static 'images/michael.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="comment-content">
+              <span class="username">Andrew:</span>
+              <span class="text">Lets Go Team B!</span>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="profile-image">
+              <img src="{% static 'images/you.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="comment-content">
+              <span class="username">Ariana:</span>
+              <span class="text">Wohoooo that's really good shot!!</span>
+            </div>
+          </div>
+        
+          <!-- New comment will be inserted here -->
+        </div>
+        <textarea placeholder="Add a Comment"></textarea>
+        <button class="submit-comment-button">Comment <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+      </div> 
+    </div>
+
+    <!-- Add more video boxes as needed -->
+  </div>
+</container>
+
+{% load static %}
+<script src="{% static 'js/live.js' %}?v=3.2"></script>
+
+{% else %}
+<div class="dialog-container">
+    <div id="dialog" class="dialog">
+      
+      {% load static %}
+      <img src="{% static 'images/fun-olympic.png' %}" style = "width: 50px; align-items: center;">
+      <h2 class = "ani">Login Required</h2>
+      <p>Please login to access and enjoy matches and live games.</p>
+      <a href = "loginn">Click here to Login</a>
+    </div>
+  </div>
+
+{% endif %}
+{% include 'html/footer.html' %}

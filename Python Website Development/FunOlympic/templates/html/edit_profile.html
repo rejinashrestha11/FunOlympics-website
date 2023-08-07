@@ -1,0 +1,19 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}?v=1.0">
+
+{% include 'html/header.html' %}
+
+<title>Edit Profile</title>
+<body>
+  <div class="contain">
+    <h2>Edit Profile</h2>
+    <form id="edit-profile" action="/edit-profile" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</body>
+
+{% include 'html/footer.html' %}

@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.image-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0 30px;
+}
+
+.image-container {
+  width: 300px;
+  margin-bottom: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease;
+}
+
+h3 {
+  text-align: center;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  animation: fadeIn 1s ease;
+}

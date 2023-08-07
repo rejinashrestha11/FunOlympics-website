@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+background: linear-gradient(90deg, rgb(47, 84, 220) 0%, rgb(73, 137, 201) 53%, rgb(41, 49, 158) 100%);
+
+}
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+}
+
+nav {
+  flex: 1;
+  padding-left: 20px;
+  margin-top: 5px;
+  
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 10px 0px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; */
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 15px;
+
+}
+
+/* input[type=text] {
+  float: left;
+  margin-left: 20px;
+
+
+} */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.search-input {
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-button {
+  padding: 4px 8px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.search-button i {
+  margin-right: 4px;
+}
+
+
+.split {
+  float: right;
+}
+
+li a:hover {
+  background-color: #44a8ff;
+}
+
+
+.navbar nav ul li.active a {
+  /* Apply styles to the active tab link */
+  /* For example: */
+  font-weight: bold;
+  background: radial-gradient(circle, rgb(20, 159, 224) 0%, rgb(49, 92, 224) 100%);
+  color: #010a11;
+}
+
+
+/* .button1 {
+  background-color: #008CBA;
+  padding: 2px;
+  border-radius: 2px;
+}  */
+
+.button1 {
+  display: inline-block;
+  padding: 8px 8px;
+  background: linear-gradient(90deg, rgb(47, 116, 220) 0%, rgb(73, 101, 201) 53%, rgb(41, 152, 158) 100%);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.button1:hover {
+  transform: scale(1.1);
+
+}
+.button1 a {
+  text-decoration: none;
+  color: #02022d;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.button1 i {
+  margin-right: 5px;
+}
+
+.buttonuser {
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(90deg, rgb(47, 116, 220) 0%, rgb(73, 101, 201) 53%, rgb(41, 152, 158) 100%);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.buttonuser:hover {
+  transform: scale(1.1);
+
+}
+.buttonuser a {
+  text-decoration: none;
+  color: #02022d;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.buttonuser i {
+  margin-right: 5px;
+}
+
+
+
+/* Footer */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.footer-distributed {
+background: linear-gradient(90deg, rgb(47, 84, 220) 0%, rgb(73, 137, 201) 53%, rgb(41, 49, 158) 100%);
+
+
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 20px 20px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* The company logo */
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+  color: #171616;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 0 0 0 130px;
+}
+
+.flogo {
+  width: 150px;
+  cursor: pointer;
+  margin-left: 130px;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  color: #030303;
+  background-color: #341d90;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 38px;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #01222f;
+  font-weight: bold;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #010a11;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: cursive;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #0c1127;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  cursor: pointer;
+  background-color: #341d90;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  line-height: 38px;
+  margin: 0 0 0 40px;
+  padding: 3px;
+
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic");
+.live-icon {
+  display: inline-block;
+  position: relative;
+  top: calc(50% - 5px);
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.live-icon:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.6);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  animation: pulsate 2s ease-in-out infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+

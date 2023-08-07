@@ -1,0 +1,90 @@
+{% include 'html/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/wish.css' %}?v=2.6">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+{% if user.is_authenticated %}
+
+
+<div class="content-b">
+
+    <div class="container-b">
+      <h2 style = "text-align: center; font-family: cursive;">Wishlist Videos</h2>
+      
+      <div class="video-sectionb">
+        <div class="recommended-video" onclick="playVideo(this)">
+            <video src="{% static 'video/highjump.mp4' %}" controls></video>
+            <div class="details">
+                <h3 class="title">Usain Bolt Wins 200m at 2023 FunOlympics in 19.40 seconds</h3>
+            </div>
+        </div>
+    
+        <div class="recommended-video" onclick="playVideo(this)">
+            <video src="{% static 'video/basketball1.mp4' %}" controls></video>
+            <div class="details">
+                <h3 class="title">Usain Bolt Wins 200m at 2023 FunOlympics in 19.40 seconds</h3>
+            </div>
+        </div>
+    
+        <div class="recommended-video" onclick="playVideo(this)">
+            <video src="{% static 'video/race.mp4' %}" controls></video>
+            <div class="details">
+                <h3 class="title">Usain Bolt Wins 200m at 2023 FunOlympics in 19.40 seconds</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-sectiona">
+        {% load static%}
+        <video src="{% static 'video/volleyball1.mp4' %}" controls></video>
+        <div class="details">
+            <h3 class="title">Usain Bolt Wins 200m at 2023 FunOlympics in 19.40 seconds</h3>
+            <p class="description">Usain Bolt put his 100m nightmare behind him to claim gold in the 200m final at the world championships in Daegu Saturday.
+                Bolt, disqualified for a false start in the final of the shorter sprint, made no mistake this time as he powered to victory in 19.40 seconds, the third fastest of all time.
+            </p>
+            <span class="views">60k views</span>
+        </div>
+            <div class="video-buttons">
+                <button class="icon-button like-button" onclick="toggleLike(this)"><i class="fas fa-thumbs-up"> Like</i></button>
+                <button class="icon-button unlike-button" onclick="toggleUnlike(this)"><i class="fas fa-thumbs-down"> Unlike</i></button>
+                <div class="share-dialog" style="display: none;">
+                    <button class="close-button1" onclick="toggleShareDialog()">&times;</button>
+                    <div class="share-dialog-content">
+                      <h3>Share on Social Media</h3>
+                      <div class="social-media-icons">
+                        <a href="#" class="social-media-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-media-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-media-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-media-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-media-icon pinterest"><i class="fab fa-pinterest"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <button class="icon-button share-button" onclick="toggleShareDialog()"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</button>
+                  
+            </div>   
+    
+      </div>
+            
+    </div>
+</div>
+
+{% load static %}
+<script src="{% static 'js/wish.js' %}?v=2.2"></script>
+
+
+
+{% else %}
+<div class="dialog-container">
+    <div id="dialog" class="dialog">
+      <span class="close-button" onclick="closeDialog()">&times;</span>
+      <h2 class = "ani">Login Required</h2>
+      <p>Please login to access and enjoy matches and live games.</p>
+      <a href = "loginn">Click here to Login</a>
+    </div>
+  </div>
+
+{% endif %}
+
+{% include 'html/footer.html' %}
+

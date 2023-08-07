@@ -1,0 +1,61 @@
+{% load static%}
+<link rel="stylesheet" href="{% static 'css/form.css' %}?v=1.6">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+{% load static %}
+<a href="/"><img src="{% static 'images/fun-olympic.png' %}" alt="logo" class="logo"></a>
+<title>Registration Form</title>
+<body>
+  <div class="contain">
+    <h2>
+      {% load static %}
+      <img src="{% static 'images/fun-olympic.png' %}" style = "width: 50px; margin-right: auto; margin-left: auto; display: block;">
+      Register
+    </h2>
+    <form id="register" action="/register" method="POST">
+      {% csrf_token %}
+      <input type="text" id="username" name="username" placeholder="Enter the username" required>
+      <input type="email" id="email" name="email" placeholder="Enter your valid email" required>
+      <div class="password-container">
+        <input type="password" id="password" name="password" placeholder="Create Password" required>
+        <i class="fas fa-eye" id="eye"></i>
+      </div>
+      <div class="password-container-b">
+      <input type="password" id="cpassword" name="cpassword" placeholder="Retype your password" required>
+      <i class="fas fa-eye" id="ceye"></i>
+    </div>
+
+      {% for message in messages %}
+      {% if messages %}
+      <div class="alert alert-danger">
+          {% for message in messages %}
+    
+    <p style="background-color: #b539239b; margin-bottom: 5px; color: black; font-weight: bolder; text-align:center; border-radius: 5px">{{ message }}</p>
+          {% endfor %}
+      </div>
+      {% endif %}
+      {%endfor%}
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-sitekey='6Lee7hslAAAAANLJQ4j8s7szGcPyOG-73w5bphkf'
+                    style="padding: 2px; margin: 0 15px 5px 15px;" Required>{{ captcha }}</div>
+      <button type="submit">Register</button>
+    </form>
+    <div class="separator">
+      <span class="text">or sign up with</span>
+    </div>
+    <div class="social-icons">
+      <button class="social-icon facebook"><i class="fa fa-facebook"></i></button>
+      <button class="social-icon google"><i class="fa fa-google"></i></button>
+      <button class="social-icon twitter"><i class="fa fa-twitter"></i></button>
+    </div>
+    <div class="login">
+      <span style = "font-weight: bolder;">Already have an account?</span>
+      <a href="loginn"><button id="login-btn" style = "font-weight: bolder;">Login Here</button></a>
+    </div>
+  </div>
+
+  {% load static %}
+  <script src="{% static 'js/script.js' %}?v=1.2"></script>
+</body>
+
+{% include 'html/footer.html'%}

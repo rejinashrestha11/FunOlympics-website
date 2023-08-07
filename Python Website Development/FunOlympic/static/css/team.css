@@ -1,0 +1,64 @@
+body {
+  /* background: linear-gradient(90deg, rgb(92, 143, 210) 0%, rgb(98, 134, 243) 53%, rgb(80, 90, 233) 100%); */
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+  background-size: cover;
+
+}
+
+h2 {
+  font-family: cursive;
+  margin: auto;
+  text-align: center;
+}
+
+.image-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0 30px;
+}
+
+.image-container {
+  width: 300px;
+  margin-bottom: 20px;
+  text-align: justify;
+  transition: transform 0.3s ease;
+  background-color: rgba(66, 104, 173, 0.572);
+  border-radius: 4%;
+  
+}
+
+h3 {
+  text-align: center;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4%;
+  padding: auto;
+  transition: transform 0.3s ease;
+}
+
+/* .image-container img:hover {
+  transform: scale(1.1);
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  animation: fadeIn 1s ease;
+}

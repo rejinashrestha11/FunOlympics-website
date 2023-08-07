@@ -1,0 +1,51 @@
+{% include 'html/header.html' %}
+<title>Basketball Team Members</title>
+{% load static%}
+<link rel="stylesheet" href="{% static 'css/team-members.css' %}?v=1.7">
+<body>
+    
+<div class = "contain">
+    <h2>Basketball Team Members</h2>
+    <div class="team-members-section">
+        <div class="team-member">
+            {% load static%}
+            <img src="{% static 'images/jap.jpg' %}" alt="Team">
+            <h3>Team Japan</h3>
+        </div>
+
+        <div class="team-member">
+            <a href="members">
+            {% load static%}
+            <img src="{% static 'images/usa.jpg' %}" alt="Team">
+            <h3>Team USA</h3>
+            </a>
+        </div>
+
+        <div class="team-member">
+            {% load static%}
+            <img src="{% static 'images/arg.png' %}" alt="Team">
+            <h3>Team Argentina</h3>
+        </div>
+
+        <div class="team-member">
+            {% load static%}
+            <img src="{% static 'images/aus.jpg' %}" alt="Team">
+            <h3>Team Australia</h3>
+        </div>
+        <div class="team-member">
+            {% load static%}
+            <img src="{% static 'images/spain.jpg' %}" alt="Team">
+            <h3>Team Spain</h3>
+        </div>
+        <div class="team-member">
+            {% load static%}
+            <img src="{% static 'images/canada.jpg' %}" alt="Team">
+            <h3>Team Canada</h3>
+        </div>
+
+        <!-- Add more team members here -->
+
+    </div>
+</div>
+</body>
+{% include 'html/footer.html' %}

@@ -1,0 +1,114 @@
+{% include 'html/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/match.css' %}?v=2.4">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+{% if user.is_authenticated %}
+
+
+<div class="content-b">
+
+    <div class="container-b">
+      <h2 style = "font-family: cursive; text-align: center; margin: 10px;">Recent Matches </h2>
+      
+      <div class="video-sectiona">
+        {% load static%}
+        <video src="{% static 'video/volleyball1.mp4' %}" controls></video>
+        <div class="details">
+            <h3 class="title">"Intense Volleyball Showdown: Nebraska vs. Illinois Clash in Epic Battle for Victory!"</h3>
+            <p class="description">Witness the ultimate display of athleticism as teams from different sports clash in a series of exhilarating competitions. From intense basketball matchups featuring the legendary Kobe Bryant to thrilling volleyball showdowns between Nebraska and Illinois, these games showcase the power, skill, and passion that make sports truly unforgettable. Get ready to be captivated by the relentless spirit and extraordinary performances that define these epic battles.</p>
+            <span class="views">60k views</span>
+        </div>
+            <div class="video-buttons">
+                <button class="icon-button like-button" onclick="toggleLike(this)"><i class="fas fa-thumbs-up"> Like</i></button>
+                <button class="icon-button unlike-button" onclick="toggleUnlike(this)"><i class="fas fa-thumbs-down"> Unlike</i></button>
+                <button class="icon-button comment-button" onclick="toggleCommentBox(this)"><i class="fas fa-comment"></i> Comment</button>
+            </div>   
+            <div class="comment-box" style="display: none;">
+                <div class="comments">
+                  <!-- Display existing comments here -->
+                
+                  <!-- Sample existing comment -->
+                  <div class="comment">
+                    <div class="profile-image">
+                      <img src="{% static 'images/michael.jpg' %}" alt="Profile Image">
+                    </div>
+                    <div class="comment-content">
+                      <span class="username">Michael:</span>
+                      <span class="text">This LIVE is really good quality!</span>
+                    </div>
+                  </div>
+                  <!-- Sample existing comment -->
+                  <div class="comment">
+                    <div class="profile-image">
+                      <img src="{% static 'images/alexander.jpg' %}" alt="Profile Image">
+                    </div>
+                    <div class="comment-content">
+                      <span class="username">Alexander:</span>
+                      <span class="text">WOW that was so cool!!!!!!</span>
+                    </div>
+                  </div>
+                  <div class="comment">
+                    <div class="profile-image">
+                      <img src="{% static 'images/you.jpg' %}" alt="Profile Image">
+                    </div>
+                    <div class="comment-content">
+                      <span class="username">Josh:</span>
+                      <span class="text">Yeah!! Enjoying from Home!!</span>
+                    </div>
+                  </div>
+                
+                  <!-- New comment will be inserted here -->
+                </div>
+                <textarea placeholder="Add a Comment"></textarea>
+                <button class="submit-comment-button">Comment <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+              </div>      
+      </div>
+
+      <div class="video-sectionb">
+        <div class="recommended-video" onclick="playVideo(this)">
+            <video src="{% static 'video/highjump.mp4' %}" controls></video>
+            <div class="details">
+                <h3 class="title">"Unleashing Athletic Greatness: Thiago Braz Stuns the World with Record-Breaking Pole Vault Performance!"</h3>
+            </div>
+        </div>
+    
+        <div class="recommended-video" onclick="playVideo(this)">
+            <video src="{% static 'video/basketball1.mp4' %}" controls></video>
+            <div class="details">
+                <h3 class="title">"Legends Never Fade: Remembering Kobe Bryant's Unforgettable Impact on the Basketball World"</h3>
+            </div>
+        </div>
+    
+        <div class="recommended-video" onclick="playVideo(this)">
+            <video src="{% static 'video/race.mp4' %}" controls></video>
+            <div class="details">
+                <h3 class="title">Usain Bolt Wins 200m at 2023 FunOlympics in 19.40 seconds</h3>
+            </div>
+        </div>
+    </div>
+            
+    </div>
+</div>
+
+{% load static %}
+<script src="{% static 'js/match.js' %}?v=2.2"></script>
+
+
+
+{% else %}
+<div class="dialog-container">
+    <div id="dialog" class="dialog">
+      <span class="close-button" onclick="closeDialog()">&times;</span>
+      
+      {% load static %}
+      <img src="{% static 'images/fun-olympic.png' %}" style = "width: 50px; align-items: center;">
+      <h2 class = "ani">Login Required</h2>
+      <p>Please login to access and enjoy matches and live games.</p>
+      <a href = "loginn">Click here to Login</a>
+    </div>
+  </div>
+
+{% endif %}
+
+{% include 'html/footer.html' %}
+

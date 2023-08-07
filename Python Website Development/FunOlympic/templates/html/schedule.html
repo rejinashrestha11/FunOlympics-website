@@ -1,0 +1,301 @@
+{% include 'html/header.html' %}
+{% load static%}
+<title>Schedule</title>
+<link rel="stylesheet" href="{% static 'css/schedule.css' %}?v=1.4">
+<body>
+<h2 style = "text-align: center; font-family: cursive; margin-top: 5px">Olympic Games Schedule</h2>
+<div class="schedule1">
+  <div class = "options">
+  <button onclick="showAllGames()">All Games</button>
+  <button onclick="showRegularDayGames()">Regular Day Games</button>
+  <button onclick="showSemiFinalGames()">Semi Final Games</button>
+  <button onclick="showFinalGames()">Final Games</button>
+ </div>
+
+ <table id="game-table">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9:00 AM</td>
+      <td class="regular">Alpine Skiing</td>
+      <td></td>
+      <td class="regular">Artistic Swimming</td>
+      <td></td>
+      <td class="regular">Sailing</td>   
+      <td></td>
+      <td class="semi-final">Baseball Softball</td>
+    </tr>
+    <tr>
+      <td>10:30 AM</td>
+      <td></td>
+      <td class="regular">200m Freestyle</td>
+      <td></td>
+      <td class="regular">200m Freestyle</td>
+      <td></td>
+      <td class="final">Beach Volleyball</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>11:30 AM</td>
+      <td class="final">Water Polo</td>
+      <td></td>
+      <td class="semi-final">High Jump</td>
+      <td></td>
+      <td class="semi-final">High Jump</td>
+      <td></td>
+      <td class="regular">200m Freestyle</td>
+    </tr>
+    <tr>
+      <td>2:00 PM</td>
+      <td class="semi-final">High Jump</td>
+      <td></td>
+      <td class="final">Water Polo</td>
+      <td></td>
+      <td class="final">Water Polo</td>
+      <td></td>
+      <td class="semi-final">200m Freestyle</td>
+    </tr>
+    <tr>
+      <td>3:30 PM</td>
+      <td></td>
+      <td class="semi-final">Baseball Softball</td>
+      <td></td>
+      <td class="regular">Beach Volleyball</td>
+      <td></td>
+      <td class="regular">200m Freestyle</td>
+      <td></td>
+    </tr>
+    <!-- Add more rows for other dates and games -->
+  </tbody>
+</table>
+
+    </div>
+
+<div class="schedule">
+  <div class="column">
+    <h3>Athletics</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Stages</th>
+          <th>Type</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Watch Live</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Qualifying</td>
+          <td>Men's 100m Sprint</td>
+          <td>July 23, 2023 - 9:00 AM</td>
+          <td>Ongoing</td>
+          <td><a href = "/live"><button style = "background-color: green">Watch Live</button></a></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>Preliminary</td>
+          <td>Women's 500 meters Race</td>
+          <td>July 24, 2023 - 9:00 AM</td>
+          <td>Upcoming</td>
+          <td><button>Coming soon</button></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>Semi-final</td>
+          <td>Womens Long Jumps</td>
+          <td>July 25, 2023 - 9:00 AM</td>
+          <td>Upcoming</td>
+          <td><button>Coming soon</button></td>
+        </tr>
+      </tbody>
+      <tbody>
+       
+    </table>
+    
+
+  </div>
+  <div class="column">
+    <h3>Swimming</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Stages</th>
+          <th>Type</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Watch Live</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Preliminary</td>
+          <td>Men's 100m Freestyle</td>
+          <td>July 24, 2023 - 10:00 AM</td>
+          <td>Ongoing</td>
+          <td><button style = "background-color: green;">Watch Live</button></td>
+        </tr>
+        <tr>
+          <td>Semifinals</td>
+          <td>Women's 200m Butterfly</td>
+          <td>July 25, 2023 - 9:30 AM</td>
+          <td>Upcoming</td>
+          <td><button>Coming soon</button></td>
+        </tr>
+        <tr>
+          <td>Finals</td>
+          <td>Men's 400m Individual Medley (IM)</td>
+          <td>July 26, 2023 - 7:00 PM</td>
+          <td>Upcoming</td>
+          <td><button>Coming soon</button></td>
+
+        </tr>
+        <!-- Additional rows for more stages and events -->
+      </tbody>
+    </table>
+    
+  </div>
+  <div class="column">
+    <h3>Tennis</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Type</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Watch Live</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>July 24, 2023</td>
+          <td>Men's Singles - First Round</td>
+          <td>Match</td>
+          <td>10:00 AM</td>
+          <td>Ongoing</td>
+          <td><button style= "background-color: green;" >Watch Live</button></td>
+        </tr>
+        <tr>
+          <td>July 24, 2023</td>
+          <td>Women's Singles - First Round</td>
+          <td>Match</td>
+          <td>2:30 PM</td>
+          <td>Upcoming</td>
+          <td><button>Comming soon</button></td>
+        </tr>
+        <tr>
+          <td>July 25, 2023</td>
+          <td>Men's Doubles - Quarterfinals</td>
+          <td>Match</td>
+          <td>11:00 AM</td>
+          <td>Upcoming</td>
+          <td><button>Comming soon</button></td>
+        </tr>
+        <tr>
+          <td>July 26, 2023</td>
+          <td>Women's Singles - Semifinals</td>
+          <td>Match</td>
+          <td>4:30 PM</td>
+          <td>Upcoming</td>
+          <td><button>Comming soon</button></td>
+        </tr>
+        <!-- Additional rows for more events and dates -->
+      </tbody>
+    </table>
+    
+</div>
+<div class="column">
+  <h3>Football</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Event</th>
+        <th>Teams</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Watch Live</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>July 25, 2023</td>
+        <td>Men's Football</td>
+        <td>USA vs. Spain</td>
+        <td>8:00 PM</td>
+        <td>Ongoing</td>
+        <td><button style = "background-color: green;">Watch Live</button></td>
+      </tr>
+      <tr>
+        <td>July 26, 2023</td>
+        <td>Women's Football</td>
+        <td>Australia vs. France</td>
+        <td>12:00 PM</td>
+        <td>Upcoming</td>
+        <td><button>Coming soon</button></td>
+      </tr>
+      <tr>
+        <td>July 28, 2023</td>
+        <td>Men's Football</td>
+        <td>Argentina vs. Nigeria</td>
+        <td>4:30 PM</td>
+        <td>Upcoming</td>
+        <td><button>Coming soon</button></td>
+      </tr>
+      <tr>
+        <td>July 29, 2023</td>
+        <td>Women's Football</td>
+        <td>China vs. Japan</td>
+        <td>9:00 AM</td>
+        <td>Upcoming</td>
+        <td><button>Coming soon</button></td>
+      </tr>
+      <!-- Additional rows for more events and teams -->
+    </tbody>
+  </table>
+  
+  
+</div>
+<div class="video-section">
+
+    {% load static%}
+    <video src="{% static 'video/Basketball.mp4' %}" autoplay muted></video>
+
+    {% load static%}
+    <video src="{% static 'video/Volleyball.mp4' %}" autoplay muted></video>
+
+</div>
+
+<div class="image-section2">
+<div class="image-container2">
+    {% load static%}
+    <img src= "{% static 'images/schedule.jpg' %}" alt="schedule">
+    {% load static%}
+    <img src= "{% static 'images/point.png' %}" alt="point">
+    </div>
+    <div class="image-container2">
+        {% load static%}
+        <video src="{% static 'video/design.mp4' %}" autoplay muted></video>
+    
+         </div>
+</div>
+</body>
+
+{% load static %}
+      <script src="{% static 'js/schedule.js' %}"></script>
+{% include 'html/footer.html'%}

@@ -1,0 +1,149 @@
+
+.container1 {
+  max-width: 800%;
+  background-image: url('https://cdn.firstcry.com/education/2022/06/24165140/2097149272.jpg');
+  background-size: cover;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.p, li, h2, .ha{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.ha{
+  text-align: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-sm-4 {
+  flex-basis: 30%;
+  max-width: 30%;
+  background-color: rgba(150, 179, 238, 0.635);
+}
+
+.col-sm-8 {
+  flex-basis: 66.66%;
+  max-width: 66.66%;  
+  padding: 20px;
+  margin: 10x;
+  background-color: rgba(150, 179, 238, 0.635);
+  border-radius: 5px;
+}
+
+.img1,
+.img2,
+.img3 {
+  max-width: 100%;
+  height: max-content;
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.img1 {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.img2 {
+  animation: fadeInRight 1s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.img3 {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.ha, .h,.p,
+.u {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.name{
+  font-family: cursive;
+}
+.thought{
+  background-color: rgba(94, 143, 241, 0.72);
+  /* margin-top: 40px; */
+}
+
+.carousel {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* background-color: rgba(94, 143, 241, 0.72); */
+  padding: 30px;
+  margin: 20px;
+  
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.message {
+  margin-top: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
+  font-family: cursive;
+
+}
+
